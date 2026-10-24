@@ -4,13 +4,22 @@ Apogee is an agent skill for Oracle APEX and Oracle Database work. It sends APEX
 
 ## Install the skill
 
-Point the harness at `skills/apogee`. The skill id is `apogee`. Invoke it with `/apogee`.
+From the project where you want Apogee, run:
 
-- Cursor. Link or copy `skills/apogee` to `.cursor/skills/apogee` in a project, or to the personal Cursor skills directory.
-- Claude Code. Link or copy `skills/apogee` to `.claude/skills/apogee`.
-- Codex and other Agent Skills hosts. Load the `skills/apogee` directory.
+```bash
+npx skills add xamdxlonewolf/apogee
+```
 
-Installing Apogee does not install the Oracle skills. Install those from the upstream repository, for example `npx skills add oracle/skills/apex` and `npx skills add oracle/skills/db`.
+Add `-g` to install it for every project on that machine. The skill id is `apogee`. Invoke it with `/apogee`.
+
+The same command works for the agents the skills CLI supports, including Cursor, Claude Code, and Codex. To copy the files yourself, point the harness at `skills/apogee`.
+
+Installing Apogee does not install the Oracle skills. Install those from the upstream repository.
+
+```bash
+npx skills add oracle/skills/apex
+npx skills add oracle/skills/db
+```
 
 ## Check freshness
 
