@@ -5,6 +5,8 @@ description: >-
   skills, then checks those installs against github.com/oracle/skills before
   editing. Use when the user invokes /apogee or asks Apogee to build, change,
   review, or validate an APEX app, APEXlang, SQL, PL/SQL, SQLcl, or utPLSQL.
+  When the user says beast-mode, read beast-mode.md and run the installed
+  poteto-mode playbook with the Oracle proof gates.
 disable-model-invocation: true
 ---
 
@@ -34,6 +36,10 @@ node scripts/check-freshness.mjs --apex "<apex-dir>" --db "<db-dir>"
 5. After an update, run the freshness script again before editing. Until that update, follow the skill that is installed.
 
 The script compares the installed tree with `https://github.com/oracle/skills` `main`. Ignore GitHub releases, git tags, and marketplace version `1.0.0`.
+
+## Beast mode
+
+If the user says `beast-mode` or `beast mode` in this request, read [beast-mode.md](beast-mode.md) and follow it. Any other `/apogee` request stays on the steps in this file. Beast mode applies to that request only.
 
 ## Route
 
@@ -71,7 +77,7 @@ For database work, read the database state the db skill names. Report the statem
 
 ## Do not
 
-- Do not edit poteto-mode.
+- Do not edit poteto-mode. Plain Apogee does not load it. Beast mode reads it.
 - Do not vendor apex or db skill text.
 - Do not require a Cursor subagent, Custom Mode, or `/loop`.
 - Do not use `control-ui` or `control-cli` as the proof.

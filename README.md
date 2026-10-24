@@ -12,6 +12,8 @@ npx skills add xamdxlonewolf/apogee
 
 Add `-g` to install it for every project on that machine. The skill id is `apogee`. Invoke it with `/apogee`.
 
+Say `/apogee beast-mode` before the task when you want that task to follow the installed poteto-mode playbook. Plain `/apogee` does not load poteto-mode. Beast mode also needs the poteto-mode skill installed.
+
 The same command works for the agents the skills CLI supports, including Cursor, Claude Code, and Codex. To copy the files yourself, point the harness at `skills/apogee`.
 
 Installing Apogee does not install the Oracle skills. Install those from the upstream repository.
